@@ -4,14 +4,6 @@ dependencies:
   - type: js
     path: ./
 
-      github_labels:
-        - dependencies
-
-      github_assignees:
-        - djones
-
-      related_pr_behavior: close
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,11 +12,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run:  npm install @percy/cli
-        run:  npm install @percy/selenium-webdriver
+        run: |
+          npm install @percy/cli
+          npm install @percy/selenium-webdriver
 
       - name: Run tests
         run: npm test
 
       - name: Visual Testing with Percy
-        run:  npx percy exec -- mvn clean test -Dtest="appTests.AppTest"
+        run: npx percy exec -- mvn clean test -Dtest="appTests.AppTest"
