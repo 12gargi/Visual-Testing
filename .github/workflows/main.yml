@@ -1,0 +1,30 @@
+version: 2
+
+dependencies:
+  - type: js
+    path: ./
+    settings:
+      node_env: production
+      dist_tags:
+        semantic-release: next
+
+      github_labels:
+        - dependencies
+
+      github_assignees:
+        - djones
+
+      related_pr_behavior: close
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
