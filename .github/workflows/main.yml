@@ -1,4 +1,9 @@
-version: 2
+name: Visual Testing with Percy
+
+on:
+  push:
+    branches:
+      - main
 
 dependencies:
   - type: js
