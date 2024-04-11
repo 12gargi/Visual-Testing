@@ -3,10 +3,6 @@ version: 2
 dependencies:
   - type: js
     path: ./
-    settings:
-      node_env: production
-      dist_tags:
-        semantic-release: next
 
       github_labels:
         - dependencies
@@ -24,7 +20,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm ci
+        run:  npm install @percy/cli
+        run:  npm install @percy/selenium-webdriver
 
       - name: Run tests
         run: npm test
