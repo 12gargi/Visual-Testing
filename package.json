@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "npx percy exec -- mvn clean test -Dtest=\"appTests.AppTest\""
+  },
   "dependencies": {
     "@percy/cli": "^1.28.2",
     "@percy/selenium-webdriver": "^2.0.5"
