@@ -14,10 +14,13 @@ This repository houses a comprehensive automation testing suite for https://todo
 
 -**Percy**: Percy is versatile, catering to projects of all sizes and complexities. It seamlessly integrates with popular CI/CD tools, supports various testing frameworks and languages, and provides a side-by-side comparison of changes for easy approval or rejection.
 
+-**Ashot**: AShot is a powerful Java library for taking screenshots in Selenium WebDriver tests. It provides capabilities for capturing full-page screenshots, comparing images, and detecting visual differences between images.
+
 ## **Project Structure :**
 
 the project structure is given below:
-![Screenshot (36)](https://github.com/12gargi/Visual-Testing/assets/97431292/a180b13f-217f-4d88-979b-21e05376e79c)
+![Screenshot (40)](https://github.com/12gargi/Visual-Testing/assets/97431292/986d1afb-534c-4e00-b640-05bbe57beebc)
+
 
 ## **Getting Started :**
 
@@ -32,7 +35,7 @@ git clone:  https://github.com/12gargi/Visual-Testing.git
 **Install Dependencies :**  i) npm install @percy/cli,
 ii) npm install @percy/selenium-webdriver
 
-**Execute Tests:**           npx percy exec -- mvn clean test -Dtest="appTests.AppTest
+**Execute Tests:**           npx percy exec -- mvn clean test -Dtest="appTests.AppTest,tests.CompareImage1,tests.CompareUsingWebDrivers,tests.TestCase,tests.WebElementScreenshot"
 
 
 
