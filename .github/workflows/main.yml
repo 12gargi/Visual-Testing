@@ -1,20 +1,9 @@
-version: 2
+name: Visual Testing with Percy
 
-dependencies:
-  - type: js
-    path: ./
-    settings:
-      node_env: production
-      dist_tags:
-        semantic-release: next
-
-      github_labels:
-        - dependencies
-
-      github_assignees:
-        - djones
-
-      related_pr_behavior: close
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -24,7 +13,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm install @percy/cli
+          npm install @percy/selenium-webdriver
 
       - name: Run tests
         run: npm test
+
+      - name: Visual Testing with Percy
+        run: npx percy exec -- mvn clean test -Dtest="appTests.AppTest"
