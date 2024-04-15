@@ -32,7 +32,7 @@ public class CompareImage1 {
 	{
 		WebDriverManager.chromedriver().setup();
 
-        driver = new ChromeDriver();
+       // driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
@@ -50,22 +50,22 @@ public class CompareImage1 {
         ImageIO.write(screenshot1.getImage(), "png",outputFile01);
         BufferedImage actualImage = ImageIO.read(outputFile01);
         
-        if(outputFile01.exists())
-        {
-        	System.out.println("Image file captured");
-        }
-        else
-        {
-        	System.out.println("Image file not captured");
-        }
+//        if(outputFile01.exists())
+//        {
+//        	System.out.println("Image file captured");
+//        }
+//        else
+//        {
+//        	System.out.println("Image file not captured");
+//        }
 
         BufferedImage referenceImage = ImageIO.read(new File("./Screenshots/refrenceImage1.png"));
         ImageDiffer differ = new ImageDiffer();
         ImageDiff diff = differ.makeDiff(referenceImage, actualImage); 
         
         if (diff.hasDiff()==true) {
-            
-            
+        	File diffImageFile = new File("./Screenshots/DifferenceImage0.png");
+            ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
             System.out.println("Differences found. Output image saved to Screenshots" );
         } else {
             System.out.println("No differences found.");

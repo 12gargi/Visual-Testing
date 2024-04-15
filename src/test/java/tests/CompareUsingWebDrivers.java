@@ -39,30 +39,22 @@ WebDriver driver;
 	@Test
     public void compareImages() throws IOException {
 
-        // Take a screenshot of the web page
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-        // Save the screenshot to a file
         File outputFile = new File("C:\\Users\\TESTRIG\\eclipse-workspace\\JavaSeleniumDemo-main\\WebManagerSS\\screenshot1.PNG");
         FileUtils.copyFile(screenshotFile, outputFile);
 
-        // Compare the screenshot with a baseline image
         File baselineImage = new File("./Screenshots/refrenceImage1.png");
         File actualImage = new File("screenshot1.png");
 
-      
-        
-        // Perform image comparison logic here
         boolean imagesMatch = compareImages(baselineImage, actualImage);
 
-        // Output the result of the comparison
         if (imagesMatch ==true) {
             System.out.println("Images match. No differences found.");
         } else {
             System.out.println("Images do not match. Differences found.");
         }
 
-        // Close the WebDriver
         driver.quit();
     }
 

@@ -1,85 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-15T12:53:32 IST" name="Default suite" finished-at="2024-04-15T12:54:16 IST" duration-ms="43572">
+  <suite started-at="2024-04-15T15:10:33 IST" name="Default suite" finished-at="2024-04-15T15:10:41 IST" duration-ms="8402">
     <groups>
     </groups>
-    <test started-at="2024-04-15T12:53:32 IST" name="Default test" finished-at="2024-04-15T12:54:16 IST" duration-ms="43572">
-      <class name="tests.CompareImage1">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:32 IST" name="beforeClass" finished-at="2024-04-15T12:53:45 IST" duration-ms="13206" status="PASS">
+    <test started-at="2024-04-15T15:10:33 IST" name="Default test" finished-at="2024-04-15T15:10:41 IST" duration-ms="8402">
+      <class name="tests.WebElementScreenshot">
+        <test-method signature="setup()[pri:0, instance:tests.WebElementScreenshot@15bb5034]" started-at="2024-04-15T15:10:33 IST" name="setup" finished-at="2024-04-15T15:10:41 IST" duration-ms="8314" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="testComparePageScreenshot()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:45 IST" name="testComparePageScreenshot" finished-at="2024-04-15T12:53:47 IST" duration-ms="1437" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testComparePageScreenshot -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:47 IST" name="tearUp" finished-at="2024-04-15T12:53:47 IST" duration-ms="88" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:47 IST" name="beforeClass" finished-at="2024-04-15T12:53:51 IST" duration-ms="4565" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="validatingForDifferentElemnt()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:51 IST" name="validatingForDifferentElemnt" finished-at="2024-04-15T12:53:52 IST" duration-ms="973" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatingForDifferentElemnt -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:52 IST" name="tearUp" finished-at="2024-04-15T12:53:53 IST" duration-ms="95" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:53 IST" name="beforeClass" finished-at="2024-04-15T12:53:56 IST" duration-ms="3703" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="validatingForDifferentElemnt2()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:56 IST" name="validatingForDifferentElemnt2" finished-at="2024-04-15T12:53:58 IST" duration-ms="1546" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatingForDifferentElemnt2 -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:58 IST" name="tearUp" finished-at="2024-04-15T12:53:58 IST" duration-ms="102" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:53:58 IST" name="beforeClass" finished-at="2024-04-15T12:54:02 IST" duration-ms="4321" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="validatingForDifferentPages()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:02 IST" name="validatingForDifferentPages" finished-at="2024-04-15T12:54:03 IST" duration-ms="1054" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatingForDifferentPages -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:03 IST" name="tearUp" finished-at="2024-04-15T12:54:03 IST" duration-ms="95" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:03 IST" name="beforeClass" finished-at="2024-04-15T12:54:10 IST" duration-ms="6555" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="validatingForSameElements()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:10 IST" name="validatingForSameElements" finished-at="2024-04-15T12:54:11 IST" duration-ms="615" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatingForSameElements -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:11 IST" name="tearUp" finished-at="2024-04-15T12:54:11 IST" duration-ms="588" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:11 IST" name="beforeClass" finished-at="2024-04-15T12:54:15 IST" duration-ms="4168" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="validatingForSameScreenshot()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:15 IST" name="validatingForSameScreenshot" finished-at="2024-04-15T12:54:16 IST" duration-ms="267" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatingForSameScreenshot -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@3e27ba32]" started-at="2024-04-15T12:54:16 IST" name="tearUp" finished-at="2024-04-15T12:54:16 IST" duration-ms="86" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-      </class> <!-- tests.CompareImage1 -->
+        </test-method> <!-- setup -->
+      </class> <!-- tests.WebElementScreenshot -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
