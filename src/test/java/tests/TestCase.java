@@ -34,13 +34,7 @@ public class TestCase {
          driver.manage().window().maximize();
         
          eyes.open(driver,"Visual Test",testInfo.getTestMethod().get().getName(),new RectangleSize (1000,600));
-         
-
-         
-
-
-         
-         
+            
     }
     @Test
     public void myTestCase() {
