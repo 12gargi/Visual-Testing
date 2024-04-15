@@ -28,7 +28,7 @@ public class TestCase {
     	eyes = new Eyes();
     	eyes.setApiKey(System.getenv("mCrTSzISW6K8FLAjxgA4SVbTgvf46It8cYLFBIGfwQI110"));
     	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
-         driver = new ChromeDriver();
+//         driver = new ChromeDriver();
          ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
