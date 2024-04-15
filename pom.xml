@@ -97,7 +97,7 @@
   </dependencies>
   <build>
     <plugins>
-        <plugin>
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.11.0</version>
@@ -114,10 +114,6 @@
                         <version>0.2.0</version>
                     </path>
                 </annotationProcessorPaths>
-                <compilerArgs>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                </compilerArgs>
             </configuration>
         </plugin>
       <!-- JUnit 5 requires Surefire version 2.22.0 or higher -->
