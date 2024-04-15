@@ -69,7 +69,7 @@ public class AppTest {
         assertEquals(0, todoEls.size());
 
         WebElement newTodoEl = driver.findElement(By.className("new-todo"));
-        newTodoEl.sendKeys("A tool!");
+        newTodoEl.sendKeys("A todo tool!");
         newTodoEl.sendKeys(Keys.RETURN);
 
         todoEls = driver.findElements(By.cssSelector(".todo-list li"));
@@ -87,7 +87,7 @@ public class AppTest {
         newTodoEl.sendKeys(Keys.RETURN);
 
         WebElement todoCountEl = driver.findElement(By.className("todo-count"));
-        assertEquals("2 item left!", todoCountEl.getText());
+        assertEquals("0 item left!", todoCountEl.getText());
 
         driver.findElement(By.cssSelector("input.toggle")).click();
 
