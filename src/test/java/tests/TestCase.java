@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
@@ -29,6 +29,9 @@ public class TestCase {
     	eyes.setApiKey(System.getenv("mCrTSzISW6K8FLAjxgA4SVbTgvf46It8cYLFBIGfwQI110"));
     	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
          driver = new ChromeDriver();
+         ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			driver = new ChromeDriver(options);
          driver.get("https://applitools.com/helloworld/");
         
          driver.manage().window().maximize();
