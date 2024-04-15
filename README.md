@@ -19,7 +19,8 @@ This repository houses a comprehensive automation testing suite for https://todo
 ## **Project Structure :**
 
 the project structure is given below:
-![Screenshot (40)](https://github.com/12gargi/Visual-Testing/assets/97431292/986d1afb-534c-4e00-b640-05bbe57beebc)
+![visualwEb](https://github.com/12gargi/Visual-Testing/assets/97431292/5c5d186f-03a8-46a8-8554-c11a90118fb9)
+
 
 
 ## **Getting Started :**
