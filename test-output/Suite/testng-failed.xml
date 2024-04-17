@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="ChromeTest(failed)">
+    <classes>
+      <class name="tests.CompareImage1">
+        <methods>
+          <include name="validatingForSameElements"/>
+          <include name="validatingForDifferentElemnt"/>
+          <include name="test_forDiff2AndFullPage"/>
+          <include name="setUpMethod"/>
+          <include name="tearUp"/>
+          <include name="validatingForSameScreenshot"/>
+          <include name="validatingForComparisonbetweenBaseImageAndActionElement"/>
+          <include name="validatingForDifferentPages"/>
+        </methods>
+      </class> <!-- tests.CompareImage1 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" parallel="methods" name="EdgeTest(failed)">
+    <classes>
+      <class name="appTests.AppTest">
+        <methods>
+          <include name="startAppAndOpenBrowser"/>
+          <include name="letsYouCheckOffATodo"/>
+          <include name="closeBrowser"/>
+          <include name="acceptsANewTodo"/>
+        </methods>
+      </class> <!-- appTests.AppTest -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

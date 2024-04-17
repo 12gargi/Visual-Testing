@@ -1,0 +1,709 @@
+<html>
+<head>
+<title>TestNG:  ChromeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/4/2</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 17 14:48:07 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>27 seconds (27256 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;org.openqa.selenium.remote.Response.getStatus()&quot; is null
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:99)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:434)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace563372220", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace563372220'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;org.openqa.selenium.remote.Response.getStatus()&quot; is null
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:99)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:434)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>1</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace791469479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace791469479'><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+</pre></div></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace85040527", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace85040527'><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+</pre></div></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CompareImage1.setUpMethod()'><b>setUpMethod</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.setUpMethod()'><b>setUpMethod</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.tearUp()'><b>tearUp</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CompareImage1.test_forDiff2AndFullPage()'><b>test_forDiff2AndFullPage</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=123.0.2420.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03bba9a950e0108b3c2268bb235167ee, clickElement {id=f.137017BECE2E64A11F81721235FCEBB5.d.F7BE7835336DFC5304FDBA6CDFD87A9F.e.20}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (03bba9a950e0108b3c2268bb235167ee)] -&gt; xpath: /html/body/div[1]/div[2]/p[3]/a]
+Session ID: 03bba9a950e0108b3c2268bb235167ee
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at tests.CompareImage1.test_forDiff2AndFullPage(CompareImage1.java:217)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1303236460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1303236460'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=123.0.2420.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03bba9a950e0108b3c2268bb235167ee, clickElement {id=f.137017BECE2E64A11F81721235FCEBB5.d.F7BE7835336DFC5304FDBA6CDFD87A9F.e.20}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (03bba9a950e0108b3c2268bb235167ee)] -&gt; xpath: /html/body/div[1]/div[2]/p[3]/a]
+Session ID: 03bba9a950e0108b3c2268bb235167ee
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at tests.CompareImage1.test_forDiff2AndFullPage(CompareImage1.java:217)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>7</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.validatingForDifferentElemnt()'><b>validatingForDifferentElemnt</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=123.0.2420.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03bba9a950e0108b3c2268bb235167ee, clickElement {id=f.137017BECE2E64A11F81721235FCEBB5.d.F7BE7835336DFC5304FDBA6CDFD87A9F.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (03bba9a950e0108b3c2268bb235167ee)] -&gt; xpath: /html/body/div[1]/div[3]/button]
+Session ID: 03bba9a950e0108b3c2268bb235167ee
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at tests.CompareImage1.validatingForDifferentElemnt(CompareImage1.java:85)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1939498095", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1939498095'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=123.0.2420.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03bba9a950e0108b3c2268bb235167ee, clickElement {id=f.137017BECE2E64A11F81721235FCEBB5.d.F7BE7835336DFC5304FDBA6CDFD87A9F.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (03bba9a950e0108b3c2268bb235167ee)] -&gt; xpath: /html/body/div[1]/div[3]/button]
+Session ID: 03bba9a950e0108b3c2268bb235167ee
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at tests.CompareImage1.validatingForDifferentElemnt(CompareImage1.java:85)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>6</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.validatingForDifferentPages()'><b>validatingForDifferentPages</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, findElement {using=xpath, value=/html/body/div[1]/div[2]/p[3]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at tests.CompareImage1.validatingForDifferentPages(CompareImage1.java:185)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1964466446", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1964466446'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, findElement {using=xpath, value=/html/body/div[1]/div[2]/p[3]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at tests.CompareImage1.validatingForDifferentPages(CompareImage1.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>7</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.validatingForComparisonbetweenBaseImageAndActionElement()'><b>validatingForComparisonbetweenBaseImageAndActionElement</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=123.0.2420.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03bba9a950e0108b3c2268bb235167ee, clickElement {id=f.137017BECE2E64A11F81721235FCEBB5.d.F7BE7835336DFC5304FDBA6CDFD87A9F.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (03bba9a950e0108b3c2268bb235167ee)] -&gt; xpath: /html/body/div[1]/div[3]/button]
+Session ID: 03bba9a950e0108b3c2268bb235167ee
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at tests.CompareImage1.validatingForComparisonbetweenBaseImageAndActionElement(CompareImage1.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1304599208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1304599208'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=123.0.2420.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03bba9a950e0108b3c2268bb235167ee, clickElement {id=f.137017BECE2E64A11F81721235FCEBB5.d.F7BE7835336DFC5304FDBA6CDFD87A9F.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.97, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63108}, msedge: {msedgedriverVersion: 123.0.2420.97 (ba5f45140663..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63108/devtoo..., se:cdpVersion: 123.0.2420.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (03bba9a950e0108b3c2268bb235167ee)] -&gt; xpath: /html/body/div[1]/div[3]/button]
+Session ID: 03bba9a950e0108b3c2268bb235167ee
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at tests.CompareImage1.validatingForComparisonbetweenBaseImageAndActionElement(CompareImage1.java:122)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>7</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CompareImage1.testComparePageusingRefrenceImage()'><b>testComparePageusingRefrenceImage</b><br>Test class: tests.CompareImage1</td>
+<td></td>
+<td>8</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CompareImage1.validatingForSameElements()'><b>validatingForSameElements</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace583175859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace583175859'><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+</pre></div></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+<tr>
+<td title='tests.CompareImage1.validatingForSameScreenshot()'><b>validatingForSameScreenshot</b><br>Test class: tests.CompareImage1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1397183087", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1397183087'><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:305)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.close(JdkHttpClient.java:324)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:427)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at setUp.SetUpPage.tearUp(SetUpPage.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose(WebSocketImpl.java:313)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.lambda$send$2(JdkHttpClient.java:284)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$5.send(JdkHttpClient.java:295)
+	... 27 more
+</pre></div></td>
+<td>0</td>
+<td>tests.CompareImage1@6caf0677</td></tr>
+</table><p>
+</body>
+</html>

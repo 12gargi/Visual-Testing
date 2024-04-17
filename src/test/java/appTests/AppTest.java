@@ -87,12 +87,12 @@ public class AppTest {
         newTodoEl.sendKeys(Keys.RETURN);
 
         WebElement todoCountEl = driver.findElement(By.className("todo-count"));
-        assertEquals("0 item left!", todoCountEl.getText());
+        assertEquals("1 item left!", todoCountEl.getText());
 
         driver.findElement(By.cssSelector("input.toggle")).click();
 
         todoCountEl = driver.findElement(By.className("todo-count"));
-        assertEquals("1 items left!", todoCountEl.getText());
+        assertEquals("0 items left!", todoCountEl.getText());
 
         
         percy.snapshot("Checked off todo", null, 2000);

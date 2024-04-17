@@ -15,6 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
+import setUp.SetUpPage;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 
 import javax.imageio.ImageIO;
@@ -23,41 +24,18 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class CompareImage1 {
+public class CompareImage1 extends SetUpPage {
 	
-	WebDriver driver;
-	
-	@BeforeMethod
-	public void beforeClass() throws IOException
-	{
-		WebDriverManager.chromedriver().setup();
-
-       // driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		driver = new ChromeDriver(options);
-        driver.get("https://applitools.com/helloworld/");
-        
-
-        
-	}
+//	WebDriver driver ;
 
     @Test
-    public void testComparePageScreenshot() throws IOException {
+    public void testComparePageusingRefrenceImage() throws IOException {
         
     	Screenshot screenshot1 = new AShot().takeScreenshot(driver);
         File outputFile01 = new File("./Screenshots/output01-image.png");
         ImageIO.write(screenshot1.getImage(), "png",outputFile01);
         BufferedImage actualImage = ImageIO.read(outputFile01);
         
-//        if(outputFile01.exists())
-//        {
-//        	System.out.println("Image file captured");
-//        }
-//        else
-//        {
-//        	System.out.println("Image file not captured");
-//        }
 
         BufferedImage referenceImage = ImageIO.read(new File("./Screenshots/refrenceImage1.png"));
         ImageDiffer differ = new ImageDiffer();
@@ -66,9 +44,9 @@ public class CompareImage1 {
         if (diff.hasDiff()==true) {
         	File diffImageFile = new File("./Screenshots/DifferenceImage0.png");
             ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
-            System.out.println("Differences found. Output image saved to Screenshots" );
+            System.out.println("Differences found. Output image saved to Screenshots"+Thread.currentThread().getId());
         } else {
-            System.out.println("No differences found.");
+            System.out.println("No differences found."+Thread.currentThread().getId());
         }
 
         
@@ -93,9 +71,9 @@ public class CompareImage1 {
         ImageDiff diff = differ.makeDiff(refImage, actuallImage);
   
         if (diff.hasDiff()==true) {
-            System.out.println("Differences found. Output image saved to Screenshots" );
+            System.out.println("Differences found. Output image saved to Screenshots"+Thread.currentThread().getId() );
         } else {
-            System.out.println("No differences found.");
+            System.out.println("No differences found."+Thread.currentThread().getId());
         }
        
     }
@@ -123,16 +101,16 @@ public class CompareImage1 {
         ImageDiff diff = differ.makeDiff(reffImage, actImage);
         
         if(diff.hasDiff()==true) {
-        	File diffImageFile = new File("./Screenshots/DifferenceImage.png");
+        	File diffImageFile = new File("./Screenshots/DifferenceImage.png"+Thread.currentThread().getId());
             ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
-            System.out.println("Differences found. Output image saved to Screenshots" );
+            System.out.println("Differences found. Output image saved to Screenshots"+Thread.currentThread().getId() );
         } else {
             System.out.println("No differences found.");
         }
     }
     
     @Test
-    public void validatingForDifferentElemnt2() throws IOException
+    public void validatingForComparisonbetweenBaseImageAndActionElement() throws IOException
     {
     	Screenshot screenshot1 = new AShot().takeScreenshot(driver);
         File outputFile1 = new File("./Screenshots/FullPageScreenshot.png");
@@ -156,9 +134,9 @@ public class CompareImage1 {
         if (diff.hasDiff()) {
             File diffImageFile = new File("./Screenshots/DifferenceImageforEle2.png");
             ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
-            System.out.println("Differences found. Output image saved to Screenshots" );
+            System.out.println("Differences found. Output image saved to Screenshots" +Thread.currentThread().getId());
         } else {
-            System.out.println("No differences found.");
+            System.out.println("No differences found."+Thread.currentThread().getId());
         }
     }
     
@@ -185,9 +163,9 @@ public class CompareImage1 {
         if (diff.hasDiff()) {
             File diffImageFile = new File("./Screenshots/DifferenceImageSame.png");
             ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
-            System.out.println("Differences found. Output image saved to Screenshots" );
+            System.out.println("Differences found. Output image saved to Screenshots"+Thread.currentThread().getId() );
         } else {
-            System.out.println("No differences found.");
+            System.out.println("No differences found."+Thread.currentThread().getId());
         }
         
         
@@ -218,22 +196,58 @@ public class CompareImage1 {
         if (diff.hasDiff()) {
             File diffImageFile = new File("./Screenshots/DifferencePage.png");
             ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
-            System.out.println("Differences found. Output image saved to Screenshots" );
+            System.out.println("Differences found. Output image saved to Screenshots"+Thread.currentThread().getId() );
         } else {
-            System.out.println("No differences found.");
+            System.out.println("No differences found."+Thread.currentThread().getId());
         }
         
     }
     
-    @AfterMethod
-    public void tearUp()
+    @Test
+    public void test_forDiff2AndFullPage() throws IOException
     {
-    	  driver.quit();
+    	
+    	Screenshot screenshot1 = new AShot().takeScreenshot(driver);
+        File outputFile01 = new File("./Screenshots/output01-image.png");
+        ImageIO.write(screenshot1.getImage(), "png",outputFile01);
+        BufferedImage actualImage = ImageIO.read(outputFile01);
+    	
+    	
+    	WebElement diff2 =driver.findElement(By.xpath("/html/body/div[1]/div[2]/p[3]/a"));
+    	diff2.click();
+    	
+//    	Screenshot screenshot7 = new AShot().takeScreenshot(driver);
+//        File outputFile05 = new File("./Screenshots/diffPagee_2-image.png");
+//        ImageIO.write(screenshot7.getImage(), "png",outputFile05);
+//        BufferedImage refrenceeImage = ImageIO.read(outputFile05);
+    	Screenshot screenshot7 = new AShot().takeScreenshot(driver);
+    	String fileName = "./Screenshots/image_" + System.currentTimeMillis() + ".png";
+    	File outputFile05 = new File(fileName);
+    	ImageIO.write(screenshot7.getImage(), "png", outputFile05);
+    	BufferedImage referenceeImage = ImageIO.read(outputFile05);
+    	
+        
+        ImageDiffer differ = new ImageDiffer();
+        ImageDiff diff = differ.makeDiff(referenceeImage, actualImage);
+        
+        
+        if (diff.hasDiff()) {
+            File diffImageFile = new File("./Screenshots/DifferencePageDynamic.png");
+            ImageIO.write(diff.getMarkedImage(), "png", diffImageFile);
+            System.out.println("Differences found. Output image saved to Screenshots" +Thread.currentThread().getId());
+        } else {
+            System.out.println("No differences found."+Thread.currentThread().getId());
+        }
+        
     }
+    
+    }
+    
+   
        
         
 
         
-}
+
 
 
