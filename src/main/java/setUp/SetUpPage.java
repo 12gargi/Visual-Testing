@@ -22,7 +22,7 @@ public class SetUpPage {
 	
     @Parameters("browser")
 	@BeforeMethod
-	public void setUpMethod(String browser) throws IOException, InterruptedException
+	public void setUpMethod(@Optional("chrome")String browser) throws IOException, InterruptedException
 	{
     	if(browser.equalsIgnoreCase("chrome")) {
     		WebDriverManager.chromedriver().setup();

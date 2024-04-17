@@ -1,11 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-17T16:11:20 IST" name="Default suite" finished-at="2024-04-17T16:11:20 IST" duration-ms="29">
+  <suite started-at="2024-04-17T16:32:08 IST" name="Default suite" finished-at="2024-04-17T16:34:13 IST" duration-ms="124277">
     <groups>
     </groups>
-    <test started-at="2024-04-17T16:11:20 IST" name="Default test" finished-at="2024-04-17T16:11:20 IST" duration-ms="29">
+    <test started-at="2024-04-17T16:32:08 IST" name="Default test" finished-at="2024-04-17T16:34:13 IST" duration-ms="124277">
+      <class name="tests.CompareImage1">
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:08 IST" name="setUpMethod" finished-at="2024-04-17T16:32:20 IST" duration-ms="12054" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testComparePageusingRefrenceImage()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:20 IST" name="testComparePageusingRefrenceImage" finished-at="2024-04-17T16:32:23 IST" duration-ms="2254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testComparePageusingRefrenceImage -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:23 IST" name="tearUp" finished-at="2024-04-17T16:32:23 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:23 IST" name="setUpMethod" finished-at="2024-04-17T16:32:31 IST" duration-ms="7896" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="test_forDiff2AndFullPage()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:31 IST" name="test_forDiff2AndFullPage" finished-at="2024-04-17T16:32:33 IST" duration-ms="1559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_forDiff2AndFullPage -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:33 IST" name="tearUp" finished-at="2024-04-17T16:32:33 IST" duration-ms="669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:33 IST" name="setUpMethod" finished-at="2024-04-17T16:32:41 IST" duration-ms="7924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="validatingForComparisonbetweenBaseImageAndActionElement()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:41 IST" name="validatingForComparisonbetweenBaseImageAndActionElement" finished-at="2024-04-17T16:32:42 IST" duration-ms="699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingForComparisonbetweenBaseImageAndActionElement -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:42 IST" name="tearUp" finished-at="2024-04-17T16:32:43 IST" duration-ms="1046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:43 IST" name="setUpMethod" finished-at="2024-04-17T16:32:50 IST" duration-ms="7024" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="validatingForDifferentElemnt()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:50 IST" name="validatingForDifferentElemnt" finished-at="2024-04-17T16:32:52 IST" duration-ms="2193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingForDifferentElemnt -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:52 IST" name="tearUp" finished-at="2024-04-17T16:32:53 IST" duration-ms="744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:32:53 IST" name="setUpMethod" finished-at="2024-04-17T16:33:02 IST" duration-ms="9357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="validatingForDifferentPages()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:33:02 IST" name="validatingForDifferentPages" finished-at="2024-04-17T16:33:05 IST" duration-ms="2329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingForDifferentPages -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:33:05 IST" name="tearUp" finished-at="2024-04-17T16:33:36 IST" duration-ms="31039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:33:36 IST" name="setUpMethod" finished-at="2024-04-17T16:33:43 IST" duration-ms="7746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="validatingForSameElements()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:33:43 IST" name="validatingForSameElements" finished-at="2024-04-17T16:33:44 IST" duration-ms="538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingForSameElements -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:33:44 IST" name="tearUp" finished-at="2024-04-17T16:33:59 IST" duration-ms="15182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method is-config="true" signature="setUpMethod(java.lang.String)[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:33:59 IST" name="setUpMethod" finished-at="2024-04-17T16:34:07 IST" duration-ms="7804" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="validatingForSameScreenshot()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:34:07 IST" name="validatingForSameScreenshot" finished-at="2024-04-17T16:34:07 IST" duration-ms="331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingForSameScreenshot -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:tests.CompareImage1@7d9d0818]" started-at="2024-04-17T16:34:07 IST" name="tearUp" finished-at="2024-04-17T16:34:13 IST" duration-ms="5449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+      </class> <!-- tests.CompareImage1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
