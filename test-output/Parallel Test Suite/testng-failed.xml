@@ -4,18 +4,13 @@
   <test thread-count="2" parallel="tests" name="EdgeTest(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="tests.CompareImage1">
+      <class name="tests.CompareUsingWebDrivers">
         <methods>
-          <include name="validatingForSameElements"/>
-          <include name="validatingForDifferentElemnt"/>
-          <include name="test_forDiff2AndFullPage"/>
           <include name="setUpMethod"/>
           <include name="tearUp"/>
-          <include name="validatingForSameScreenshot"/>
-          <include name="validatingForComparisonbetweenBaseImageAndActionElement"/>
-          <include name="validatingForDifferentPages"/>
+          <include name="compareImages"/>
         </methods>
-      </class> <!-- tests.CompareImage1 -->
+      </class> <!-- tests.CompareUsingWebDrivers -->
     </classes>
   </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [Parallel Test Suite] -->

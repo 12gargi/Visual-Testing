@@ -1,12 +1,9 @@
 package tests;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
+import setUp.SetUpPage;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,23 +15,23 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class CompareUsingWebDrivers {
+public class CompareUsingWebDrivers extends SetUpPage {
 
-WebDriver driver;
-	
-	@BeforeMethod
-	public void beforeClass() throws IOException
-	{
-		WebDriverManager.chromedriver().setup();
-
-       
-        ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		driver = new ChromeDriver(options);
-        driver.get("https://applitools.com/helloworld/");
-
-        
-	}
+//WebDriver driver;
+//	
+//	@BeforeMethod
+//	public void beforeClass() throws IOException
+//	{
+//		WebDriverManager.chromedriver().setup();
+//
+//       
+//        ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--headless");
+//		driver = new ChromeDriver(options);
+//        driver.get("https://applitools.com/helloworld/");
+//
+//        
+//	}
 	
 	@Test
     public void compareImages() throws IOException {
@@ -86,9 +83,9 @@ WebDriver driver;
         }
     }
     
-    @AfterMethod
-    public void tearUp()
-    {
-    	  driver.quit();
-    }
+//    @AfterMethod
+//    public void tearUp()
+//    {
+//    	  driver.quit();
+//    }
 }

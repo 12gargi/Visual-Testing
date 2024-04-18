@@ -16,29 +16,34 @@ import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SetUpPage {
-    public static WebDriver driver;
+    public  WebDriver driver;
     ChromeOptions options = new ChromeOptions();
     EdgeOptions edgeoptions = new EdgeOptions();
 	
     @Parameters("browser")
 	@BeforeMethod
-	public void setUpMethod(@Optional("chrome")String browser) throws IOException, InterruptedException
+	public void setUpMethod(String browser) throws IOException, InterruptedException
 	{
     	if(browser.equalsIgnoreCase("chrome")) {
     		WebDriverManager.chromedriver().setup();
-    		driver = new ChromeDriver();
+//    		 ChromeOptions options = new ChromeOptions();
+    			options.addArguments("--headless");
+    			driver = new ChromeDriver(options);
+//    		driver = new ChromeDriver();
     		System.out.println("Chrome driver launch");
     	}
     	
     	else if(browser.equalsIgnoreCase("edge"))
     	{
     		WebDriverManager.edgedriver().setup();
-    		driver = new EdgeDriver();
+    		edgeoptions.addArguments("--headless");
+    		driver = new EdgeDriver(edgeoptions);
+//    		driver = new EdgeDriver();
     		System.out.println("Edge driver launch");
     	}
     	
     	driver.get("https://applitools.com/helloworld/");
-    	Thread.sleep(5000);
+//    	Thread.sleep(5000);
 //        driver = new ChromeDriver();
 ////        ChromeOptions options = new ChromeOptions();
 ////		options.addArguments("--headless");
@@ -49,6 +54,8 @@ public class SetUpPage {
 	 @AfterMethod
 	    public void tearUp()
 	    {
-	    	  driver.quit();
+		 if (driver != null) {
+	            driver.quit();
+	        }
 	    }
 }
