@@ -5,15 +5,9 @@
     <classes>
       <class name="tests.CompareImage1">
         <methods>
-          <include name="validatingForSameElements"/>
           <include name="testComparePageusingRefrenceImage"/>
-          <include name="validatingForDifferentElemnt"/>
-          <include name="test_forDiff2AndFullPage"/>
           <include name="setUpMethod"/>
           <include name="tearUp"/>
-          <include name="validatingForSameScreenshot"/>
-          <include name="validatingForComparisonbetweenBaseImageAndActionElement"/>
-          <include name="validatingForDifferentPages"/>
         </methods>
       </class> <!-- tests.CompareImage1 -->
     </classes>
